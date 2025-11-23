@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<title>Baby Test ❤️💙</title>
+<style>
+    body {
+        background-color: #71b6f9;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        color: #003060;
+    }
+    h1 {
+        text-align: center;
+        font-size: 32px;
+    }
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 10px;
+        border: 1px solid #003060;
+        font-size: 16px;
+    }
+    button {
+        background: #0050b3;
+        color: white;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .result {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #002244;
+    }
+    .hearts {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>💙 Baby Test 💙</h1>
+<div class="hearts">💙💙💙💙💙</div>
+
+<div class="container">
+
+    <!-- NAME -->
+    <label>Enter your name baby ko:</label>
+    <input type="text" id="name">
+
+    <!-- BABY NAME -->
+    <label>Ano name ng baby mo?</label>
+    <input type="text" id="babyName">
+    <div id="babyNameResult" class="result"></div>
+
+    <!-- POGI QUESTION -->
+    <label>Pogi ba s'ya?</label>
+    <select id="pogi">
+        <option value="">-- Pili ka baby --</option>
+        <option>yes</option>
+        <option>oo</option>
+        <option>sypre</option>
+        <option>sobra</option>
+    </select>
+    <div id="pogiResult" class="result"></div>
+
+    <!-- LOCATION -->
+    <label>Taga saan ang baby mo?</label>
+    <select id="location">
+        <option value="">-- Pili ka baby --</option>
+        <option>bodega</option>
+        <option>bulajo</option>
+        <option>korea</option>
+        <option>hulugan</option>
+    </select>
+    <div id="locationResult" class="result"></div>
+
+    <!-- ANNIVERSARY -->
+    <label>Kailan anniversary niyo ng baby mo?</label>
+    <select id="anniv">
+        <option value="">-- Pili ka baby --</option>
+        <option>Oktober 25</option>
+        <option>october 25</option>
+        <option>oktobre bayte singko</option>
+        <option>08/25</option>
+    </select>
+    <div id="annivResult" class="result"></div>
+
+    <!-- MISS MO NA BA AKO -->
+    <label>Miss mo na ba ako?</label>
+    <input type="text" id="miss">
+    <div id="missResult" class="result"></div>
+
+    <button onclick="checkAnswers()">Submit</button>
+
+</div>
+
+<script>
+function checkAnswers() {
+
+    // BABY NAME CHECK
+    const baby = document.getElementById("babyName").value.toLowerCase();
+    if (baby === "richelle" || baby === "riri") {
+        babyNameResult.textContent = "Congratulations!";
+    } else {
+        babyNameResult.textContent = "Mali baby hehe 😗";
+    }
+
+    // POGI CHECK
+    const pogi = document.getElementById("pogi").value.toLowerCase();
+    if (pogi === "sobra") {
+        pogiResult.textContent = "Wow galing ah 😘 kiss kita mwamwa";
+    } else {
+        pogiResult.textContent = "Hmm mali yan baby 😏";
+    }
+
+    // LOCATION CHECK
+    const loc = document.getElementById("location").value.toLowerCase();
+    if (loc === "bulajo") {
+        locationResult.textContent = "kainin mo pepe ko punta ka dito 😘";
+    } else {
+        locationResult.textContent = "Ay mali yan baby 😗";
+    }
+
+    // ANNIVERSARY CHECK
+    const anniv = document.getElementById("anniv").value.toLowerCase();
+    if (anniv === "october 25") {
+        annivResult.textContent = "Dapat lang tanda mo 😘";
+    } else {
+        annivResult.textContent = "Wala na tampo na ako 😤";
+    }
+
+    // MISS MO NA BA AKO
+    const miss = document.getElementById("miss").value;
+    if (miss.trim() !== "") {
+        missResult.textContent = "Aww baby 😘 noted.";
+    }
+}
+</script>
+
+</body>
+</html>
